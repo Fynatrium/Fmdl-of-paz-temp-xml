@@ -1,0 +1,750 @@
+==================================================
+  MGS V FMDL IMPORTER STARTED
+==================================================
+
+[START] Validating paths
+[SUCCESS] Path validation
+
+==================================================
+  PARSING FMDL FILE
+==================================================
+
+==================================================
+  DICTIONARY MANAGER
+==================================================
+
+[START] Initializing dictionaries
+
+------------------------------
+  Loading FMDL Dictionary
+------------------------------
+[DEBUG] First 5 lines:
+[DEBUG]   1:
+[DEBUG]   2: __iron_f
+[DEBUG]   3: _glass_a2
+[DEBUG]   4: _gntn_hndr001
+[DEBUG]   5: _iron_c_nr
+[DEBUG]   ...
+[DEBUG]   20655: zonbi4
+[DEBUG]   20656: zonbi5
+[DEBUG]   20657: zubon
+[WARNING] Line 2: Invalid format: __iron_f...
+[WARNING] Line 3: Invalid format: _glass_a2...
+[WARNING] Line 4: Invalid format: _gntn_hndr001...
+[WARNING] Line 5: Invalid format: _iron_c_nr...
+[WARNING] Line 6: Invalid format: aaa...
+[WARNING] ... (more warnings suppressed)
+[SUCCESS] FMDL dictionary - 0 entries loaded
+
+------------------------------
+  Loading QAR Dictionary
+------------------------------
+[DEBUG] First 5 lines:
+[DEBUG]   1: /Assets/fox/effect/gr_pic/base_FILTERLUT
+[DEBUG]   2: /Assets/fox/effect/gr_pic/default_reflection
+[DEBUG]   3: /Assets/fox/effect/gr_pic/material_params
+[DEBUG]   4: /Assets/fox/effect/gr_pic/materials_alp_rgba32_nomip
+[DEBUG]   5: /Assets/fox/effect/gr_pic/materials_alp_rgba32_nomip_nrt
+[DEBUG]   ...
+[DEBUG]   53149: /Tpp/Scripts/Ui/TppUiInit
+[DEBUG]   53150: /Tpp/Scripts/Ui/TppUiPrefetchTexture
+[DEBUG]   53151: /Tpp/start
+[SUCCESS] QAR dictionary - 0 entries loaded
+[SUCCESS] Dictionary loading - FMDL: 0, QAR: 0
+
+==================================================
+  FMDL PARSER INITIALIZATION
+==================================================
+
+[START] Reading: ddg0_main3_def.fmdl
+[SUCCESS] File loaded - 617,152 bytes (0.59 MB)
+
+------------------------------
+  FMDL Header (Multi-Version)
+------------------------------
+
+[START] Parsing header at offset 0x00
+[WARNING] Unknown version: 0x40028F5C
+[INFO] Engine: UNKNOWN (v0x40028F5C)
+[INFO] Features: 20 | Buffers: 2
+[INFO] Features data: 0x00000100
+[INFO] Buffers data: 0x000038E0
+[SUCCESS] Header parsed - UNKNOWN compatible
+
+------------------------------
+  Feature Headers
+------------------------------
+
+[START] Reading 20 features
+[INFO] F 0: BONE_DEFS            [    94] @ 0x00000000
+[INFO] F 3: MESH_DEFS            [    23] @ 0x00001290
+[INFO] F 4: MATERIAL_INSTANCES   [    11] @ 0x000016E0
+[INFO] F 6: TEXTURE_REFS         [    46] @ 0x00001A7C
+[INFO] F 9: MESH_DATA_LAYOUTS    [    23] @ 0x00001CA4
+[INFO] F10: MESH_BUFFER_HEADERS  [    89] @ 0x00001D5C
+[INFO] F11: FORMAT_ELEMENTS      [   173] @ 0x00002024
+[INFO] F13: AABBS                [    78] @ 0x000022E0
+[INFO] F14: FILE_MESH_BUFFERS    [     3] @ 0x00002CA0
+[INFO] F17: IBUFFER_SLICES       [    92] @ 0x00002CE0
+[INFO] F21: PATH_HASHES          [    46] @ 0x00003048
+[INFO] F22: NAME_HASHES          [   197] @ 0x000031B8
+[SUCCESS] Features parsed - 20 total, critical: {0: 94, 3: 23, 4: 11, 6: 46}
+
+------------------------------
+  Buffer Headers
+------------------------------
+
+[START] Reading 2 buffers
+[INFO] B0: MATERIAL_PARAMS [272 bytes] @ 0x00000000
+[INFO] B1: VERTEX_BUFFER [602,320 bytes] @ 0x00000110
+[SUCCESS] Buffers parsed - 2 total, 1 VBuffers
+
+------------------------------
+  Names (StrCode64)
+------------------------------
+
+[START] Loading 197 names @ 0x000032B8
+[SUCCESS] Names loaded - 197 entries
+[DEBUG] First: Bone_0000B8A0BF169F98
+[DEBUG] Last:  Bone_0000CD7F1E1D4699
+[DEBUG] Bone sample: Bone_0000B8A0BF169F98
+
+------------------------------
+  Paths (PathCode64)
+------------------------------
+
+[START] Loading 46 paths @ 0x00003148
+[SUCCESS] Paths loaded - 46 entries
+[DEBUG] First: tex_156BE4335C48348E_tex
+[DEBUG] Texture: tex_156BE4335C48348E_tex
+
+------------------------------
+  Reading Bounding Boxes
+------------------------------
+
+[START] Reading 78 AABBs @ 0x000023E0
+[INFO] [✓] AABB  0: center=(0.00,-0.12,0.09), size=(0.42,1.13,1.71)
+[INFO] [✓] AABB  1: center=(0.00,-0.13,0.11), size=(0.42,1.12,1.67)
+[INFO] [✓] AABB  2: center=(-0.02,0.30,0.80), size=(0.12,0.08,0.08)
+[INFO] [✓] AABB  3: center=(-0.04,0.29,0.82), size=(0.03,0.02,0.02)
+[INFO] [✓] AABB  4: center=(0.00,0.09,0.04), size=(0.33,0.70,1.60)
+[INFO] [✓] AABB  5: center=(0.00,-0.17,0.13), size=(0.25,0.05,0.06)
+[INFO] [✓] AABB  6: center=(0.00,0.28,0.82), size=(0.17,0.09,0.10)
+[INFO] [✓] AABB  7: center=(0.00,-0.09,-0.10), size=(0.30,0.43,0.44)
+[INFO] [✓] AABB  8: center=(0.01,-0.02,0.04), size=(0.40,0.41,0.50)
+[INFO] [✓] AABB  9: center=(0.00,-0.03,0.24), size=(0.42,0.43,0.42)
+[SUCCESS] AABBs parsed - 78 boxes
+
+------------------------------
+  Reading Bone Definitions
+------------------------------
+
+[START] Reading 94 bones @ 0x00000100
+[INFO] Bone  0: Bone_000             ROOT AABB:7
+[INFO] Bone  1: Bone_001             →0 AABB:8
+[INFO] Bone  2: Bone_002             →1 AABB:9
+[INFO] Bone  3: Bone_003             →2 AABB:10
+[INFO] Bone  4: Bone_004             →3 AABB:11
+[INFO] Bone  5: Bone_005             →4 AABB:12
+[INFO] Bone  6: Bone_006             →5 AABB:13
+[INFO] Bone  7: Bone_007             →3 AABB:14
+[INFO] Bone  8: Bone_008             →7 AABB:15
+[INFO] Bone  9: Bone_009             →8 AABB:16
+[SUCCESS] Bones parsed - 94 bones
+
+------------------------------
+  Reading Bone Groups
+------------------------------
+
+[START] Reading 11 bone groups @ 0x00001890
+[INFO] BoneGroup  0: 7 bones - [6, 31, 40, 44, 48, 49, 50]...
+[INFO] BoneGroup  1: 2 bones - [18, 19]...
+[INFO] BoneGroup  2: 32 bones - [0, 1, 2, 3, 4, 6, 7, 8]...
+[INFO] BoneGroup  3: 32 bones - [2, 3, 4, 5, 6, 7, 8, 12]...
+[INFO] BoneGroup  4: 32 bones - [0, 1, 2, 3, 4, 7, 8, 9]...
+[SUCCESS] Bone groups parsed - 11 groups
+
+------------------------------
+  Reading Mesh Definitions
+------------------------------
+
+[START] Reading 23 meshes @ 0x00001390
+[INFO] Mesh  0: verts= 156, faces= 264, mat=0, boneGroup=0
+[INFO] Mesh  1: verts= 760, faces=1022, mat=1, boneGroup=0
+[INFO] Mesh  2: verts=  80, faces=  80, mat=4, boneGroup=1
+[INFO] Mesh  3: verts=2102, faces=2568, mat=5, boneGroup=2
+[INFO] Mesh  4: verts=  40, faces=  40, mat=5, boneGroup=2
+[SUCCESS] Mesh definitions parsed - 23 meshes
+
+------------------------------
+  Reading Materials
+------------------------------
+[WARNING] No MATERIALS feature → using fallback
+
+------------------------------
+  Reading Texture References
+------------------------------
+
+[START] Reading 46 texture refs @ 0x00001B7C
+[INFO] Tex 0: Tex_104                        path=None
+[INFO] Tex 1: Tex_106                        path=None
+[INFO] Tex 2: Tex_108                        path=None
+[INFO] Tex 3: Tex_110                        path=None
+[INFO] Tex 4: Tex_112                        path=None
+[INFO] Tex 5: Tex_114                        path=None
+[INFO] Tex 6: Tex_116                        path=None
+[INFO] Tex 7: Tex_123                        path=None
+[INFO] Tex 8: Tex_124                        path=None
+[INFO] Tex 9: Tex_125                        path=None
+[SUCCESS] Texture refs parsed - 46 textures
+
+------------------------------
+  Reading Mesh Data Layout Descriptions
+------------------------------
+
+[START] Reading 23 layouts @ 0x00001DA4
+[INFO] L 0: 3b/6e/1uv stride~288 bh=0 fe=0
+[INFO] L 1: 3b/6e/1uv stride~288 bh=3 fe=6
+[INFO] L 2: 4b/7e/1uv stride~448 bh=6 fe=12
+[INFO] L 3: 4b/8e/2uv stride~512 bh=10 fe=19
+[INFO] L 4: 4b/8e/2uv stride~512 bh=14 fe=27
+[INFO] L 5: 4b/8e/2uv stride~512 bh=18 fe=35
+[INFO] L 6: 4b/8e/2uv stride~512 bh=22 fe=43
+[INFO] L 7: 4b/7e/1uv stride~448 bh=26 fe=51
+[INFO] L 8: 4b/7e/1uv stride~448 bh=30 fe=58
+[INFO] L 9: 4b/7e/1uv stride~448 bh=34 fe=65
+[INFO] L10: 4b/7e/1uv stride~448 bh=38 fe=72
+[INFO] L11: 4b/7e/1uv stride~448 bh=42 fe=79
+[INFO] L12: 4b/7e/1uv stride~448 bh=46 fe=86
+[INFO] L13: 4b/7e/1uv stride~448 bh=50 fe=93
+[INFO] L14: 4b/8e/2uv stride~512 bh=54 fe=100
+[INFO] L15: 4b/7e/1uv stride~448 bh=58 fe=108
+[INFO] L16: 4b/9e/4uv stride~576 bh=62 fe=115
+[INFO] L17: 4b/9e/4uv stride~576 bh=66 fe=124
+[INFO] L18: 4b/8e/2uv stride~512 bh=70 fe=133
+[INFO] L19: 4b/9e/4uv stride~576 bh=74 fe=141
+[INFO] L20: 4b/9e/4uv stride~576 bh=78 fe=150
+[INFO] L21: 4b/8e/2uv stride~512 bh=82 fe=159
+[INFO] L22: 3b/6e/1uv stride~288 bh=86 fe=167
+[SUCCESS] Layouts parsed - 23 layouts
+[INFO] Multi-buffer: 23/23
+[INFO] High-complexity: 0/23
+
+------------------------------
+  Reading Mesh Buffer Headers
+------------------------------
+[WARNING] No MESH_BUFFER_HEADERS feature
+
+------------------------------
+  Reading Vertex Formats
+------------------------------
+
+[START] Reading 173 format elements @ 0x00002124
+[INFO] E  0: POSITION     UBYTE    @0x0000 (1B)
+[INFO] E  1: NORMAL       R11G11B10 @0x0000 (4B)
+[INFO] E  2: BINORMAL     R11G11B10 @0x0008 (4B)
+[INFO] E  3: BONE_WEIGHT0 D3DCOLOR @0x0010 (4B)
+[INFO] E  4: UV0          UNK_9    @0x0014 (4B)
+[INFO] E  5: UV1          UNK_7    @0x0018 (4B)
+[INFO] E  6: POSITION     UBYTE    @0x0000 (1B)
+[INFO] E  7: NORMAL       R11G11B10 @0x0000 (4B)
+[INFO] E  8: BINORMAL     R11G11B10 @0x0008 (4B)
+[INFO] E  9: BONE_WEIGHT0 D3DCOLOR @0x0010 (4B)
+[INFO] E 10: UV0          UNK_9    @0x0014 (4B)
+[INFO] E 11: UV1          UNK_7    @0x0018 (4B)
+[INFO] E 12: POSITION     UBYTE    @0x0000 (1B)
+[INFO] E 13: NORMAL       R11G11B10 @0x0000 (4B)
+[INFO] E 14: BINORMAL     R11G11B10 @0x0008 (4B)
+[INFO] E 15: COLOR        D3DCOLOR @0x0010 (4B)
+[INFO] E 16: BONE_WEIGHT0 D3DCOLOR @0x0014 (4B)
+[INFO] E 17: UV0          UNK_9    @0x0018 (4B)
+[INFO] E 18: UV1          UNK_7    @0x001C (4B)
+[INFO] E 19: POSITION     UBYTE    @0x0000 (1B)
+[SUCCESS] Format elements parsed - 173 elements
+[INFO] Position: 23, Normal: 23, UV: 61
+[INFO] BoneWeights: 23, BoneIndices: 0
+
+------------------------------
+  Reading File Mesh Buffer Headers
+------------------------------
+
+[START] Reading 3 file buffer headers @ 0x00002DA0
+[INFO] [✓] F 0: VERTEX_BUFFER size=0x01E510B offset=0x00000000
+[INFO] [✓] F 1: VERTEX_BUFFER size=0x051670B offset=0x0001E510
+[INFO] [✓] F 2: INDEX_BUFFER size=0x023550B offset=0x0006FB80
+[SUCCESS] File buffer headers parsed - 3 headers
+[INFO] VBuffers: 2, IBuffers: 1, Invalid: 0
+
+------------------------------
+  Reading IBuffer Slices
+------------------------------
+
+[START] Reading 92 IBuffer slices @ 0x00002DE0
+[INFO] [✓] S 0: start=       0, count=   792 (264 triangles)
+[INFO] [✓] S 1: start=     792, count=   264 (88 triangles)
+[INFO] [✓] S 2: start=    1026, count=   150 (50 triangles)
+[INFO] [✓] S 3: start=    1143, count=    99 (33 triangles)
+[INFO] [✓] S 4: start=       0, count=  3066 (1022 triangles)
+[INFO] [✓] S 5: start=    2946, count=  1374 (458 triangles)
+[INFO] [✓] S 6: start=    3846, count=  1041 (347 triangles)
+[INFO] [✓] S 7: start=    4542, count=   750 (250 triangles)
+[INFO] [✓] S 8: start=       0, count=   240 (80 triangles)
+[INFO] [✓] S 9: start=     168, count=   162 (54 triangles)
+[SUCCESS] IBuffer slices parsed - 92 slices
+[INFO] Valid: 92/92, Total triangles: 36526
+
+==================================================
+  PARSING COMPLETE
+==================================================
+[RESULT] Bones: 94
+[RESULT] Bone Groups: 11
+[RESULT] Meshes: 23
+[RESULT] Materials: 11
+[RESULT] AABBs: 78
+
+==================================================
+  BLENDER BUILDER INITIALIZED
+==================================================
+[INFO] Input data: 94 bones, 23 meshes, 11 materials
+
+==================================================
+  BUILDING BLENDER SCENE
+==================================================
+
+------------------------------
+  Creating Materials
+------------------------------
+
+[START] Creating 11 materials
+
+==================================================
+  FOX TEXTURE FINDER
+==================================================
+[INFO] FMDL parsed: base=unknown, part=, variant=def
+
+[START] Scanning texture folder
+[SUCCESS] Folder scanned - 26005 DDS files, 7194 hash-indexed
+
+[START] Building material: Mat_0 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_0
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_0
+
+[START] Building material: Mat_1 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_1
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_1
+
+[START] Building material: Mat_2 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_2
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_2
+
+[START] Building material: Mat_3 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_3
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_3
+
+[START] Building material: Mat_4 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_4
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_4
+
+[START] Building material: Mat_5 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_5
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_5
+
+[START] Building material: Mat_6 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_6
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_6
+
+[START] Building material: Mat_7 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_7
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_7
+
+[START] Building material: Mat_8 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_8
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_8
+
+[START] Building material: Mat_9 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_9
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_9
+
+[START] Building material: Mat_10 (shader: fox3ddf_blin)
+[DEBUG] Created new material: Mat_10
+[DEBUG] Setup BSDF and output nodes
+[SUCCESS] Material built - Mat_10
+[SUCCESS] Materials created - 11 materials
+
+------------------------------
+  Creating Armature
+------------------------------
+
+[START] Creating armature with 94 bones
+Traceback (most recent call last):
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 166, in _onDepsgraphUpdate
+    State.update_scene(scene)
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in update_scene
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in <listcomp>
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+AttributeError: 'Object' object has no attribute 'session_uid'
+Traceback (most recent call last):
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 166, in _onDepsgraphUpdate
+    State.update_scene(scene)
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in update_scene
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in <listcomp>
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+AttributeError: 'Object' object has no attribute 'session_uid'
+[DEBUG] Created bone: Bone_000 at (0.000, 0.000, -0.000)
+[DEBUG] Created bone: Bone_001 at (0.000, 0.001, -0.000)
+[DEBUG] Created bone: Bone_002 at (0.000, 0.201, -0.000)
+[DEBUG] Created bone: Bone_003 at (0.000, 0.401, -0.000)
+[DEBUG] Created bone: Bone_004 at (0.000, 0.521, -0.000)
+[DEBUG] Created bone: Bone_005 at (0.000, 0.608, -0.135)
+[DEBUG] Created bone: Bone_006 at (0.000, 0.701, -0.277)
+[DEBUG] Created bone: Bone_007 at (-0.106, 0.582, 0.040)
+[DEBUG] Created bone: Bone_008 at (0.106, 0.582, 0.074)
+[DEBUG] Created bone: Bone_009 at (0.106, 0.537, 0.275)
+[DEBUG] Created bone: Bone_010 at (0.106, 0.538, 0.537)
+[DEBUG] Created bone: Bone_011 at (0.106, 0.562, 0.654)
+[DEBUG] Created bone: Bone_012 at (0.106, 0.582, 0.040)
+[DEBUG] Created bone: Bone_013 at (-0.106, 0.582, 0.074)
+[DEBUG] Created bone: Bone_014 at (-0.106, 0.537, 0.275)
+[DEBUG] Created bone: Bone_015 at (-0.106, 0.538, 0.537)
+[DEBUG] Created bone: Bone_016 at (-0.106, 0.562, 0.654)
+[DEBUG] Created bone: Bone_017 at (0.106, -0.109, 0.034)
+[DEBUG] Created bone: Bone_018 at (0.106, -0.133, 0.290)
+[DEBUG] Created bone: Bone_019 at (0.106, -0.293, 0.446)
+[DEBUG] Created bone: Bone_020 at (0.106, -0.293, 0.655)
+[DEBUG] Created bone: Bone_021 at (-0.106, -0.109, 0.034)
+[DEBUG] Created bone: Bone_022 at (-0.106, -0.133, 0.290)
+[DEBUG] Created bone: Bone_023 at (-0.106, -0.293, 0.446)
+[DEBUG] Created bone: Bone_024 at (-0.106, -0.293, 0.655)
+[DEBUG] Created bone: Bone_025 at (0.000, -0.165, -0.016)
+[DEBUG] Created bone: Bone_026 at (0.000, -0.315, -0.016)
+[DEBUG] Created bone: Bone_027 at (0.000, -0.465, -0.016)
+[DEBUG] Created bone: Bone_028 at (0.000, -0.615, -0.016)
+[DEBUG] Created bone: Bone_029 at (0.000, 0.201, 0.111)
+[DEBUG] Created bone: Bone_030 at (0.000, 0.701, -0.277)
+[DEBUG] Created bone: Bone_031 at (0.000, 0.771, -0.250)
+[DEBUG] Created bone: Bone_032 at (0.035, 0.905, -0.232)
+[DEBUG] Created bone: Bone_033 at (0.054, 0.803, -0.215)
+[DEBUG] Created bone: Bone_034 at (0.026, 0.855, -0.170)
+[DEBUG] Created bone: Bone_035 at (-0.026, 0.855, -0.170)
+[DEBUG] Created bone: Bone_036 at (-0.054, 0.803, -0.215)
+[DEBUG] Created bone: Bone_037 at (-0.035, 0.905, -0.232)
+[DEBUG] Created bone: Bone_038 at (0.032, 0.875, -0.277)
+[DEBUG] Created bone: Bone_039 at (-0.032, 0.875, -0.277)
+[DEBUG] Created bone: Bone_040 at (0.033, 0.807, -0.296)
+[DEBUG] Created bone: Bone_041 at (0.032, 0.801, -0.307)
+[DEBUG] Created bone: Bone_042 at (0.032, 0.801, -0.287)
+[DEBUG] Created bone: Bone_043 at (0.040, 0.819, -0.322)
+[DEBUG] Created bone: Bone_044 at (-0.033, 0.807, -0.296)
+[DEBUG] Created bone: Bone_045 at (-0.032, 0.801, -0.307)
+[DEBUG] Created bone: Bone_046 at (-0.032, 0.801, -0.287)
+[DEBUG] Created bone: Bone_047 at (-0.040, 0.819, -0.322)
+[DEBUG] Created bone: Bone_048 at (0.000, 0.790, -0.221)
+[DEBUG] Created bone: Bone_049 at (0.000, 0.837, -0.207)
+[DEBUG] Created bone: Bone_050 at (0.000, 0.880, -0.182)
+[DEBUG] Created bone: Bone_051 at (0.040, 0.857, -0.232)
+[DEBUG] Created bone: Bone_052 at (-0.040, 0.857, -0.232)
+[DEBUG] Created bone: Bone_053 at (0.000, 0.002, -0.000)
+[DEBUG] Created bone: Bone_054 at (0.000, 0.202, -0.000)
+[DEBUG] Created bone: Bone_055 at (0.000, 0.402, -0.000)
+[DEBUG] Created bone: Bone_056 at (0.000, 0.521, -0.001)
+[DEBUG] Created bone: Bone_057 at (0.000, 0.608, -0.136)
+[DEBUG] Created bone: Bone_058 at (0.106, -0.109, 0.035)
+[DEBUG] Created bone: Bone_059 at (-0.106, -0.109, 0.035)
+[DEBUG] Created bone: Bone_060 at (0.106, 0.582, 0.073)
+[DEBUG] Created bone: Bone_061 at (-0.106, 0.582, 0.073)
+[DEBUG] Created bone: Bone_062 at (0.000, 0.700, -0.334)
+[DEBUG] Created bone: Bone_063 at (0.000, 0.202, 0.111)
+[DEBUG] Created bone: Bone_064 at (0.066, 0.711, -0.332)
+[DEBUG] Created bone: Bone_065 at (-0.066, 0.711, -0.332)
+[DEBUG] Created bone: Bone_066 at (0.020, 0.608, -0.135)
+[DEBUG] Created bone: Bone_067 at (-0.020, 0.608, -0.135)
+[DEBUG] Created bone: Bone_068 at (0.000, 0.608, -0.155)
+[DEBUG] Created bone: Bone_069 at (0.000, 0.608, -0.115)
+[DEBUG] Created bone: Bone_070 at (0.106, 0.582, 0.076)
+[DEBUG] Created bone: Bone_071 at (-0.106, 0.582, 0.076)
+[DEBUG] Created bone: Bone_072 at (0.020, 0.401, -0.000)
+[DEBUG] Created bone: Bone_073 at (-0.020, 0.401, -0.000)
+[DEBUG] Created bone: Bone_074 at (0.000, 0.401, -0.020)
+[DEBUG] Created bone: Bone_075 at (0.020, 0.201, -0.000)
+[DEBUG] Created bone: Bone_076 at (-0.020, 0.201, -0.000)
+[DEBUG] Created bone: Bone_077 at (0.000, 0.201, -0.020)
+[DEBUG] Created bone: Bone_078 at (0.106, -0.109, 0.036)
+[DEBUG] Created bone: Bone_079 at (-0.106, -0.109, 0.036)
+[DEBUG] Created bone: Bone_080 at (0.000, -0.315, -0.015)
+[DEBUG] Created bone: Bone_081 at (0.000, -0.465, -0.017)
+[DEBUG] Created bone: Bone_082 at (0.000, -0.615, -0.017)
+[DEBUG] Created bone: Bone_083 at (0.020, 0.521, -0.000)
+[DEBUG] Created bone: Bone_084 at (-0.020, 0.521, -0.000)
+[DEBUG] Created bone: Bone_085 at (0.000, 0.521, -0.020)
+[DEBUG] Created bone: Bone_086 at (0.000, 0.521, 0.020)
+[DEBUG] Created bone: Bone_087 at (0.010, 0.001, -0.000)
+[DEBUG] Created bone: Bone_088 at (-0.010, 0.001, -0.000)
+[DEBUG] Created bone: Bone_089 at (0.000, 0.001, -0.010)
+[DEBUG] Created bone: Bone_090 at (0.010, 0.701, -0.277)
+[DEBUG] Created bone: Bone_091 at (-0.010, 0.701, -0.277)
+[DEBUG] Created bone: Bone_092 at (0.000, 0.701, -0.287)
+[DEBUG] Created bone: Bone_093 at (0.000, 0.701, -0.267)
+[DEBUG] Set parent: Bone_001 -> Bone_000
+[DEBUG] Set parent: Bone_002 -> Bone_001
+[DEBUG] Set parent: Bone_003 -> Bone_002
+[DEBUG] Set parent: Bone_004 -> Bone_003
+[DEBUG] Set parent: Bone_005 -> Bone_004
+[DEBUG] Set parent: Bone_006 -> Bone_005
+[DEBUG] Set parent: Bone_007 -> Bone_003
+[DEBUG] Set parent: Bone_008 -> Bone_007
+[DEBUG] Set parent: Bone_009 -> Bone_008
+[DEBUG] Set parent: Bone_010 -> Bone_009
+[DEBUG] Set parent: Bone_011 -> Bone_010
+[DEBUG] Set parent: Bone_012 -> Bone_003
+[DEBUG] Set parent: Bone_013 -> Bone_012
+[DEBUG] Set parent: Bone_014 -> Bone_013
+[DEBUG] Set parent: Bone_015 -> Bone_014
+[DEBUG] Set parent: Bone_016 -> Bone_015
+[DEBUG] Set parent: Bone_017 -> Bone_000
+[DEBUG] Set parent: Bone_018 -> Bone_017
+[DEBUG] Set parent: Bone_019 -> Bone_018
+[DEBUG] Set parent: Bone_020 -> Bone_019
+[DEBUG] Set parent: Bone_021 -> Bone_000
+[DEBUG] Set parent: Bone_022 -> Bone_021
+[DEBUG] Set parent: Bone_023 -> Bone_022
+[DEBUG] Set parent: Bone_024 -> Bone_023
+[DEBUG] Set parent: Bone_025 -> Bone_000
+[DEBUG] Set parent: Bone_026 -> Bone_025
+[DEBUG] Set parent: Bone_027 -> Bone_026
+[DEBUG] Set parent: Bone_028 -> Bone_027
+[DEBUG] Set parent: Bone_029 -> Bone_002
+[DEBUG] Set parent: Bone_030 -> Bone_006
+[DEBUG] Set parent: Bone_031 -> Bone_030
+[DEBUG] Set parent: Bone_032 -> Bone_030
+[DEBUG] Set parent: Bone_033 -> Bone_030
+[DEBUG] Set parent: Bone_034 -> Bone_031
+[DEBUG] Set parent: Bone_035 -> Bone_031
+[DEBUG] Set parent: Bone_036 -> Bone_030
+[DEBUG] Set parent: Bone_037 -> Bone_030
+[DEBUG] Set parent: Bone_038 -> Bone_030
+[DEBUG] Set parent: Bone_039 -> Bone_030
+[DEBUG] Set parent: Bone_040 -> Bone_030
+[DEBUG] Set parent: Bone_041 -> Bone_030
+[DEBUG] Set parent: Bone_042 -> Bone_030
+[DEBUG] Set parent: Bone_043 -> Bone_030
+[DEBUG] Set parent: Bone_044 -> Bone_030
+[DEBUG] Set parent: Bone_045 -> Bone_030
+[DEBUG] Set parent: Bone_046 -> Bone_030
+[DEBUG] Set parent: Bone_047 -> Bone_030
+[DEBUG] Set parent: Bone_048 -> Bone_031
+[DEBUG] Set parent: Bone_049 -> Bone_048
+[DEBUG] Set parent: Bone_050 -> Bone_049
+[DEBUG] Set parent: Bone_051 -> Bone_030
+[DEBUG] Set parent: Bone_052 -> Bone_030
+[DEBUG] Set parent: Bone_053 -> Bone_001
+[DEBUG] Set parent: Bone_054 -> Bone_002
+[DEBUG] Set parent: Bone_055 -> Bone_003
+[DEBUG] Set parent: Bone_056 -> Bone_004
+[DEBUG] Set parent: Bone_057 -> Bone_005
+[DEBUG] Set parent: Bone_058 -> Bone_017
+[DEBUG] Set parent: Bone_059 -> Bone_021
+[DEBUG] Set parent: Bone_060 -> Bone_008
+[DEBUG] Set parent: Bone_061 -> Bone_013
+[DEBUG] Set parent: Bone_062 -> Bone_006
+[DEBUG] Set parent: Bone_063 -> Bone_002
+[DEBUG] Set parent: Bone_064 -> Bone_030
+[DEBUG] Set parent: Bone_065 -> Bone_030
+[DEBUG] Set parent: Bone_066 -> Bone_005
+[DEBUG] Set parent: Bone_067 -> Bone_005
+[DEBUG] Set parent: Bone_068 -> Bone_005
+[DEBUG] Set parent: Bone_069 -> Bone_005
+[DEBUG] Set parent: Bone_070 -> Bone_008
+[DEBUG] Set parent: Bone_071 -> Bone_013
+[DEBUG] Set parent: Bone_072 -> Bone_003
+[DEBUG] Set parent: Bone_073 -> Bone_003
+[DEBUG] Set parent: Bone_074 -> Bone_003
+[DEBUG] Set parent: Bone_075 -> Bone_002
+[DEBUG] Set parent: Bone_076 -> Bone_002
+[DEBUG] Set parent: Bone_077 -> Bone_002
+[DEBUG] Set parent: Bone_078 -> Bone_017
+[DEBUG] Set parent: Bone_079 -> Bone_021
+[DEBUG] Set parent: Bone_080 -> Bone_026
+[DEBUG] Set parent: Bone_081 -> Bone_027
+[DEBUG] Set parent: Bone_082 -> Bone_028
+[DEBUG] Set parent: Bone_083 -> Bone_004
+[DEBUG] Set parent: Bone_084 -> Bone_004
+[DEBUG] Set parent: Bone_085 -> Bone_004
+[DEBUG] Set parent: Bone_086 -> Bone_004
+[DEBUG] Set parent: Bone_087 -> Bone_001
+[DEBUG] Set parent: Bone_088 -> Bone_001
+[DEBUG] Set parent: Bone_089 -> Bone_001
+[DEBUG] Set parent: Bone_090 -> Bone_006
+[DEBUG] Set parent: Bone_091 -> Bone_006
+[DEBUG] Set parent: Bone_092 -> Bone_006
+[DEBUG] Set parent: Bone_093 -> Bone_006
+[DEBUG] Adjusted tail for Bone_000 based on 4 children
+[DEBUG] Adjusted tail for Bone_001 based on 5 children
+[DEBUG] Adjusted tail for Bone_002 based on 7 children
+[DEBUG] Adjusted tail for Bone_003 based on 7 children
+[DEBUG] Adjusted tail for Bone_004 based on 6 children
+[DEBUG] Adjusted tail for Bone_005 based on 6 children
+[DEBUG] Adjusted tail for Bone_006 based on 6 children
+[DEBUG] Adjusted tail for Bone_007 based on 1 children
+[DEBUG] Adjusted tail for Bone_008 based on 3 children
+[DEBUG] Adjusted tail for Bone_009 based on 1 children
+[DEBUG] Adjusted tail for Bone_010 based on 1 children
+[DEBUG] Adjusted tail for Bone_012 based on 1 children
+[DEBUG] Adjusted tail for Bone_013 based on 3 children
+[DEBUG] Adjusted tail for Bone_014 based on 1 children
+[DEBUG] Adjusted tail for Bone_015 based on 1 children
+[DEBUG] Adjusted tail for Bone_017 based on 3 children
+[DEBUG] Adjusted tail for Bone_018 based on 1 children
+[DEBUG] Adjusted tail for Bone_019 based on 1 children
+[DEBUG] Adjusted tail for Bone_021 based on 3 children
+[DEBUG] Adjusted tail for Bone_022 based on 1 children
+[DEBUG] Adjusted tail for Bone_023 based on 1 children
+[DEBUG] Adjusted tail for Bone_025 based on 1 children
+[DEBUG] Adjusted tail for Bone_026 based on 2 children
+[DEBUG] Adjusted tail for Bone_027 based on 2 children
+[DEBUG] Adjusted tail for Bone_028 based on 1 children
+[DEBUG] Adjusted tail for Bone_030 based on 19 children
+[DEBUG] Adjusted tail for Bone_031 based on 3 children
+[DEBUG] Adjusted tail for Bone_048 based on 1 children
+[DEBUG] Adjusted tail for Bone_049 based on 1 children
+Traceback (most recent call last):
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 166, in _onDepsgraphUpdate
+    State.update_scene(scene)
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in update_scene
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in <listcomp>
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+AttributeError: 'Object' object has no attribute 'session_uid'
+Traceback (most recent call last):
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 166, in _onDepsgraphUpdate
+    State.update_scene(scene)
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in update_scene
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in <listcomp>
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+AttributeError: 'Object' object has no attribute 'session_uid'
+[SUCCESS] Armature created - 94 bones
+
+------------------------------
+  Creating AABBs (mode: all)
+------------------------------
+
+[START] Creating all 78 AABBs
+[DEBUG] Created AABB_0: size=(0.423, 1.127, 1.710)
+[DEBUG] Created AABB_1: size=(0.423, 1.124, 1.675)
+[DEBUG] Created AABB_2: size=(0.115, 0.078, 0.081)
+[DEBUG] Created AABB_3: size=(0.026, 0.020, 0.019)
+[DEBUG] Created AABB_4: size=(0.334, 0.696, 1.598)
+[DEBUG] Created AABB_5: size=(0.246, 0.049, 0.058)
+[DEBUG] Created AABB_6: size=(0.169, 0.085, 0.099)
+[DEBUG] Created AABB_7: size=(0.298, 0.429, 0.436)
+[DEBUG] Created AABB_8: size=(0.397, 0.407, 0.497)
+[DEBUG] Created AABB_9: size=(0.423, 0.429, 0.424)
+[DEBUG] Created AABB_10: size=(0.423, 0.496, 0.587)
+[DEBUG] Created AABB_11: size=(0.329, 0.398, 0.408)
+[DEBUG] Created AABB_12: size=(0.324, 0.424, 0.331)
+[DEBUG] Created AABB_13: size=(0.334, 0.377, 0.433)
+[DEBUG] Created AABB_14: size=(0.249, 0.461, 0.422)
+[DEBUG] Created AABB_15: size=(0.205, 0.506, 0.322)
+[DEBUG] Created AABB_16: size=(0.110, 0.427, 0.147)
+[DEBUG] Created AABB_17: size=(0.095, 0.272, 0.125)
+[DEBUG] Created AABB_18: size=(0.087, 0.236, 0.160)
+[DEBUG] Created AABB_19: size=(0.316, 0.468, 0.430)
+[DEBUG] Created AABB_20: size=(0.205, 0.506, 0.322)
+[DEBUG] Created AABB_21: size=(0.110, 0.427, 0.147)
+[DEBUG] Created AABB_22: size=(0.096, 0.272, 0.125)
+[DEBUG] Created AABB_23: size=(0.087, 0.236, 0.160)
+[DEBUG] Created AABB_24: size=(0.179, 0.535, 0.351)
+[DEBUG] Created AABB_25: size=(0.152, 0.583, 0.375)
+[DEBUG] Created AABB_26: size=(0.081, 0.309, 0.187)
+[DEBUG] Created AABB_27: size=(0.087, 0.180, 0.165)
+[DEBUG] Created AABB_28: size=(0.175, 0.535, 0.351)
+[DEBUG] Created AABB_29: size=(0.152, 0.583, 0.375)
+[DEBUG] Created AABB_30: size=(0.081, 0.309, 0.187)
+[DEBUG] Created AABB_31: size=(0.087, 0.180, 0.165)
+[DEBUG] Created AABB_32: size=(0.257, 0.188, 0.518)
+[DEBUG] Created AABB_33: size=(0.175, 0.182, 0.580)
+[DEBUG] Created AABB_34: size=(0.175, 0.178, 0.486)
+[DEBUG] Created AABB_35: size=(0.169, 0.182, 0.344)
+[DEBUG] Created AABB_36: size=(-20000000000.000, -20000000000.000, -20000000000.000)
+[DEBUG] Created AABB_37: size=(0.229, 0.142, 0.203)
+[DEBUG] Created AABB_38: size=(0.048, 0.049, 0.182)
+[DEBUG] Created AABB_39: size=(0.145, 0.121, 0.153)
+[DEBUG] Created AABB_40: size=(0.051, 0.056, 0.090)
+[DEBUG] Created AABB_41: size=(0.051, 0.056, 0.090)
+[DEBUG] Created AABB_42: size=(0.147, 0.124, 0.169)
+[DEBUG] Created AABB_43: size=(0.048, 0.049, 0.088)
+[DEBUG] Created AABB_44: size=(0.065, 0.081, 0.139)
+[DEBUG] Created AABB_45: size=(0.065, 0.094, 0.139)
+[DEBUG] Created AABB_46: size=(0.030, 0.031, 0.021)
+[DEBUG] Created AABB_47: size=(0.049, 0.042, 0.046)
+[DEBUG] Created AABB_48: size=(0.069, 0.083, 0.088)
+[DEBUG] Created AABB_49: size=(0.069, 0.085, 0.097)
+[DEBUG] Created AABB_50: size=(0.030, 0.031, 0.021)
+[DEBUG] Created AABB_51: size=(0.055, 0.051, 0.054)
+[DEBUG] Created AABB_52: size=(0.072, 0.088, 0.088)
+[DEBUG] Created AABB_53: size=(0.072, 0.087, 0.097)
+[DEBUG] Created AABB_54: size=(0.033, 0.034, 0.078)
+[DEBUG] Created AABB_55: size=(0.033, 0.046, 0.085)
+[DEBUG] Created AABB_56: size=(0.033, 0.050, 0.088)
+[DEBUG] Created AABB_57: size=(0.023, 0.043, 0.057)
+[DEBUG] Created AABB_58: size=(0.023, 0.043, 0.057)
+[DEBUG] Created AABB_59: size=(0.293, 0.413, 0.303)
+[DEBUG] Created AABB_60: size=(0.423, 0.421, 0.349)
+[DEBUG] Created AABB_61: size=(0.324, 0.391, 0.362)
+[DEBUG] Created AABB_62: size=(0.324, 0.462, 0.373)
+[DEBUG] Created AABB_63: size=(0.280, 0.407, 0.313)
+[DEBUG] Created AABB_64: size=(0.280, 0.407, 0.313)
+[DEBUG] Created AABB_65: size=(0.168, 0.309, 0.262)
+[DEBUG] Created AABB_66: size=(0.168, 0.309, 0.262)
+[DEBUG] Created AABB_67: size=(0.201, 0.106, 0.197)
+[DEBUG] Created AABB_68: size=(0.333, 0.277, 0.307)
+[DEBUG] Created AABB_69: size=(0.118, 0.189, 0.140)
+[DEBUG] Created AABB_70: size=(0.118, 0.199, 0.134)
+[DEBUG] Created AABB_71: size=(0.090, 0.116, 0.120)
+[DEBUG] Created AABB_72: size=(0.090, 0.116, 0.120)
+[DEBUG] Created AABB_73: size=(0.172, 0.079, 0.172)
+[DEBUG] Created AABB_74: size=(0.175, 0.080, 0.206)
+[DEBUG] Created AABB_75: size=(0.124, 0.075, 0.113)
+[DEBUG] Created AABB_76: size=(0.000, 0.105, 0.205)
+[DEBUG] Created AABB_77: size=(0.149, 0.059, 0.076)
+[SUCCESS] AABBs created - 78 boxes
+
+------------------------------
+  Creating Meshes
+------------------------------
+
+[START] Creating 23 meshes
+
+==================================================
+  VERTEX BUFFER READER
+==================================================
+
+[START] Reading vertex buffer for mesh 0
+[ERROR] Import failed - 'data_layout_index'
+Traceback (most recent call last):
+  File "\Text", line 3991, in main
+  File "\Text", line 3868, in build
+  File "\Text", line 3563, in create_meshes
+  File "\Text", line 3584, in _create_single_mesh
+  File "\Text", line 2426, in read_vertex_buffer
+KeyError: 'data_layout_index'
+Traceback (most recent call last):
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 166, in _onDepsgraphUpdate
+    State.update_scene(scene)
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in update_scene
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+  File "C:\Users\Ali\AppData\Roaming\Blender Foundation\Blender\4.0\scripts\addons\io_scene_valvesource\utils.py", line 158, in <listcomp>
+    cls._exportableObjects = set([ob.session_uid for ob in scene.objects if ob.type in exportable_types and not (ob.type == 'CURVE' and ob.data.bevel_depth == 0 and ob.data.extrude == 0)])
+AttributeError: 'Object' object has no attribute 'session_uid'
